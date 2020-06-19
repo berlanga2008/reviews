@@ -31,10 +31,12 @@ $verified = wc_review_is_from_verified_owner( $comment->comment_ID );
 
 <div itemprop="itemReviewed" itemscope itemtype="http://schema.org/Place">
 <span itemprop="name">Tour</span>
-<li itemprop="review" itemscope itemtype="http://schema.org/Review" <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+<li itemprop="review" itemscope itemtype="http://schema.org/Review" class="tour-reviews__item margin-left margin-right padding-top padding-bottom" id="li-comment-<?php comment_ID() ?>">
    
 
 	<div id="comment-<?php comment_ID(); ?>" class="comment_container">
+		<div class="tour-reviews__item__container">
+		<div class="tour-reviews__item__info">
 
 		<?php echo get_avatar( $comment, apply_filters( 'woocommerce_review_gravatar_size', '60' ), '' ); ?>
 
@@ -74,7 +76,9 @@ $verified = wc_review_is_from_verified_owner( $comment->comment_ID );
 
 			<?php do_action( 'woocommerce_review_after_comment_text', $comment ); ?>
 
+				<div class="tour-reviews__item__container"> 
+		<div class="tour-reviews__item__info">
+
 		</div>
 	</div>
 	
-</div>	
